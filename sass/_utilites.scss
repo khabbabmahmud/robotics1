@@ -1,0 +1,64 @@
+.container, .wrapper{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+@mixin child_container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.btn{
+    text-decoration:none;
+    text-transform:uppercase;
+    display:inline-block;
+    padding:14px 24px;
+    background:$graybg;
+    border:1px solid $graybg;
+    font-size:14px;
+    font-weight:600;
+    transition: background 800ms, color 800ms, border 800ms;
+    color:#281727;
+    &:hover{
+        background:transparent;
+        border:1px solid $wt;
+        color:$wt;
+    }
+}
+
+@mixin custom_btn{
+    background: $gradient;
+    color: $wt;
+    border: 1px solid;
+    margin-top: 2rem;
+    &:hover{
+        color:$blue;
+        background:$wt;
+        border:1px solid $blue;
+    }
+}
+
+
+$header_title: 3rem;
+$lg_section_title_font: 2rem;
+$lg_sub_title_font: 1rem;
+$md_section_title_font: 1.5rem;
+$md_sub_title_font: .85rem;
+$card_title_font: 1.5rem;
+
+
+@mixin section_title_subtitle{
+    text-align:center;
+    h2{
+        font-size:$lg_section_title_font;
+    }
+    p{
+        font-size: $lg_sub_title_font;
+        color:$gray;
+        padding-top: 1rem;
+    }
+}
+
+
